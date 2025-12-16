@@ -40,6 +40,7 @@ import "../styles/home.css";
 
 <main class="below-fold">
 
+  <!-- Instagram reference -->
   <section class="external-doc">
     <img
       src="images/cnc_install.jpg"
@@ -47,22 +48,17 @@ import "../styles/home.css";
     />
 
     <p class="caption">
-      
-
       <a
         href="https://www.instagram.com/reel/DR4ysYQEY6K/"
         target="_blank"
         rel="noopener"
         class="ig-link"
       >
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 12 16a4.5 4.5 0 0 0 0-9zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zm4.8-2.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/>
         </svg>
-      See Light Portals at <em>Cincinnati Nature Center</em> through Dec 28.<br />
-      </a>  
+        See Light Portals at <em>Cincinnati Nature Center</em> through Dec 28
+      </a>
     </p>
   </section>
 
@@ -92,10 +88,9 @@ import "../styles/home.css";
     </a>
   </section>
 
+  <!-- Project sections -->
+
   <section class="project-detail">
-    <div class="project-media">
-      <img src="images/cnc_install.jpg" alt="CNC Installation" />
-    </div>
 
     <div class="project-text">
       <h2>Animating Memories</h2>
@@ -117,18 +112,14 @@ import "../styles/home.css";
       </p>
 
     </div>
+
+    <div class="project-media">
+      <img src="images/cnc_install.jpg" alt="CNC Installation" />
+    </div>
+
   </section>
 
-  <section class="project-detail reverse">
-    <div class="project-video">
-      <video
-        src="video/cnc.mp4"
-        poster="images/cnc.jpg"
-        controls
-        preload="metadata"
-        playsinline
-      ></video>
-    </div>
+  <section class="project-detail">
 
     <div class="project-text">
       <h2>How do they work?</h2>
@@ -145,13 +136,20 @@ import "../styles/home.css";
         speaker to create an immersive sound experience.
       </p>
     </div>
+
+    <div class="project-video">
+      <video
+        src="video/cnc.mp4"
+        poster="images/cnc.jpg"
+        controls
+        preload="metadata"
+        playsinline
+      ></video>
+    </div>
+
   </section>
 
   <section class="project-detail">
-
-    <div class="project-media">
-      <img src="images/construction1.jpg" alt="Construction" />
-    </div>
 
     <div class="project-text">
       <h2>Windows and Frames</h2>
@@ -175,13 +173,14 @@ import "../styles/home.css";
         to ensure the film did not peel or bubble.
       </p>
     </div>
-  </section>
-
-  <section class="project-detail reverse">
 
     <div class="project-media">
-      <img src="images/leds_in_frame.jpg" alt="LEDs" />
+      <img src="images/construction1.jpg" alt="Construction" />
     </div>
+
+  </section>
+
+  <section class="project-detail">
 
     <div class="project-text">
       <h2>LEDs</h2>
@@ -204,13 +203,14 @@ import "../styles/home.css";
         and proximity.
       </p>
     </div>
+
+    <div class="project-media">
+      <img src="images/leds_in_frame.jpg" alt="LEDs" />
+    </div>
+
   </section>
 
   <section class="project-detail">
-
-    <div class="project-media">
-      <img src="images/board2.jpg" alt="LEDs" />
-    </div>
 
     <div class="project-text">
       <h2>Microcontroller</h2>
@@ -229,12 +229,46 @@ import "../styles/home.css";
       <p>
         Programming for the Plasma is in MicroPython. 
       </p>
+    </div>
+
+    <div class="project-media">
+      <img src="images/board3.jpg" alt="Plasma" />
+    </div>
+
+  </section>
+
+    <section class="project-detail">
+
+    <div class="project-text">
+      <h2>Sensors</h2>
+
+      <p>
+        We use mmWave radar sensors to detect visitors. Ultrasonic sensors didn’t provide reliable readings 
+        for human distance, so we switched to mmWave, which delivers consistent and precise measurements 
+        up to five meters.
+      </p>
+
+      <p>
+        We mount each sensor along the side of the Portals, giving it a roughly 60-degree field of view to 
+        detect movement from both the front and back. As people move through the space, the sensors generate 
+        a wave of change that passes through the Portals, synchronizing their light and sound in real time.
+      </p>
+
+      <p>
+        Cabling posed a challenge, so we built custom four-foot, four-conductor wires that plug directly 
+        into the main board. These allow us to position the sensors cleanly along the Portal frames 
+        while keeping the electronics centralized.
+      </p>
+    </div>
+
+    <div class="project-media">
+      <img src="images/mmwave.jpg" alt="Sensor" />
+    </div>
+
+  </section>
+
+
 </main>
 
 </BaseLayout>
 
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.below-fold').classList.add('loaded');
-});
-</script>

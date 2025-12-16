@@ -101,7 +101,6 @@ video {
   padding: clamp(2rem, 5vw, 4rem);
 }
 
-
 .studio-name {
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -184,6 +183,10 @@ video {
   z-index: 1; /* ensure text is above any overlay */
 }
 
+/* =========================
+   Instagram section
+   ========================= */
+
 .external-doc {
   max-width: 480px;
   margin: 4rem auto;
@@ -220,6 +223,9 @@ video {
   color: #fff;
 }
 
+/* =========================
+   Portfolio section
+   ========================= */
 
 .section-description {
   font-size: clamp(0.9rem, 1.6vw, 1.15rem);
@@ -238,13 +244,11 @@ video {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-
 /* Trigger fade-in */
 .below-fold.loaded .section-description {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .portfolio-row {
   display: flex;
@@ -301,44 +305,18 @@ video {
   line-height: 1.4;
 }
 
+/* =========================
+   Project sections
+   ========================= */
+
 .project-detail {
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
   max-width: 1200px;
-  margin: 6rem auto;
-  padding: 0 clamp(2rem, 6vw, 4rem);
+  margin: 0 auto 6rem;
+  padding: 0 1.5rem;
 }
 
-.project-detail.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Image */
-.project-media {
-  flex: 1 1 45%;
-}
-
-.project-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Text */
 .project-text {
-  flex: 1 1 55%;
-  color: #ffffff;
-  font-weight: 200;
-  line-height: 1rem;
-}
-
-.project-text p {
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-  line-height: 1.65;
-  margin: 0 0 1.1rem;
-  color: rgba(255, 255, 255, 0.88);
+  max-width: min(52ch, 90vw);  
 }
 
 .project-text h2 {
@@ -348,16 +326,31 @@ video {
   letter-spacing: 0.4px;
 }
 
-/* mobile stacking */
+.project-text p {
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.65;
+  margin: 0 0 1.2rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.project-media {
+  margin-top: 3rem;
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
 @media (max-width: 768px) {
-  .link-row-3 .link-card,
-  .link-row-2 .link-card {
-    flex: 1 1 100%;
-  }
-  .link-card {
-    flex: 1 1 100%;
-    max-height: 200px; /* slightly smaller on mobile */
-  }
   .portfolio-card {
     flex-direction: column; /* stack image on top */
   }
@@ -368,11 +361,14 @@ video {
   }
 
   .project-detail {
-    flex-direction: column;
-    gap: 2.5rem;
+    margin-bottom: 5rem;
   }
 
   .project-text h2 {
-    font-size: 1.8rem;
-  }  
+    font-size: 1.75rem;
+  }
+
+  .project-text p {
+    font-size: 1rem;
+  }
 }
