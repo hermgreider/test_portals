@@ -177,7 +177,58 @@ import "../styles/home.css";
     </div>
   </section>
 
+  <section class="project-detail reverse">
 
+    <div class="project-media">
+      <img src="images/leds_in_frame.jpg" alt="LEDs" />
+    </div>
+
+    <div class="project-text">
+      <h2>LEDs</h2>
+
+      <p>
+        Each Portal is illuminated by a two-meter Adafruit NeoPixel LED strip, encased in an IP67-rated silicone sleeve. 
+        Each strip contains 120 individually addressable RGB LEDs, allowing light to be precisely controlled at every point 
+        along its length.
+      </p>
+
+      <p>
+        The LED strips are suspended within the frame using garden netting, creating a flexible, non-rigid structure 
+        that diffuses the light and softens the geometry of the form.
+      </p>
+
+      <p>
+        The LEDs are programmed in MicroPython using a mathematically generated noise algorithm that animates across 
+        all 120 pixels. Environmental sensors continuously influence this animation. As visitors approach the Portals, 
+        the movement accelerates and the color palette shifts, causing the light to respond directly to human presence 
+        and proximity.
+      </p>
+    </div>
+  </section>
+
+  <section class="project-detail">
+
+    <div class="project-media">
+      <img src="images/board2.jpg" alt="LEDs" />
+    </div>
+
+    <div class="project-text">
+      <h2>Microcontroller</h2>
+
+      <p>
+        Control is handled by a Pimoroni Plasma 2350 microcontroller. This board was selected for its ability 
+        to supply both 5V power for the LED strips and 3.3V power for sensors and control electronics, allowing 
+        the system to operate from a single controller without additional power regulation.
+      </p>
+      <p>
+        A distance sensor is connected to the Plasma 2350 via a serial interface. The measured distance value 
+        is used by the microcontroller to influence the LED animations and is also transmitted over a second 
+        serial connection to a Daisy Seed audio module. Both light and sound respond to the same proximity 
+        data, maintaining a direct relationship between visitor movement and system behavior.
+      </p>
+      <p>
+        Programming for the Plasma is in MicroPython. 
+      </p>
 </main>
 
 </BaseLayout>
